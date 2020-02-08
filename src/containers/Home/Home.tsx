@@ -1,16 +1,13 @@
 import React from 'react';
 import './Home.scss';
-import Header from "../../components/Header/Header";
+import Layout from "../Layout/Layout";
 
 class Home extends React.Component {
     render() {
         return (
-            <div>
-                <Header/>
-                <div>
-                    Home page...
-                </div>
-            </div>
+            <Layout>
+                Home page...
+            </Layout>
         );
     };
 }

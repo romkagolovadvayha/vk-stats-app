@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 // @ts-ignore
-import { Router, Route, browserHistory } from "react-router";
+import {Router, Route, browserHistory} from "react-router";
 // @ts-ignore
 import {syncHistoryWithStore} from "react-router-redux";
-// @ts-ignore
-import { Provider } from "react-redux";
+import {Provider} from "react-redux";
 import configureStore from "./redux/configureStore";
 import Home from "./containers/Home/Home";
 import Contacts from "./containers/Contacts/Contacts";
 import NotFoundPage from "./containers/NotFoundPage/NotFoundPage";
 
 import './index.scss';
+import Header from "./components/Header/Header";
 
 const store = configureStore();
 

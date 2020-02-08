@@ -1,11 +1,14 @@
 import React from 'react';
 import './NotFoundPage.scss';
+// @ts-ignore
+import {Link} from "react-router";
+import Layout from "../Layout/Layout";
 
 const NotFoundPage = () => {
   return (
-      <div>
-          404 page...
-      </div>
+      <Layout>
+          Страница не найдена! <Link to="/">Перейти на главная страницу...</Link>
+      </Layout>
   );
 };
 

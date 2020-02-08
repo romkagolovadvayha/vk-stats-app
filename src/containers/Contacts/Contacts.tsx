@@ -1,16 +1,13 @@
 import React from 'react';
 import './Contacts.scss';
-import Header from "../../components/Header/Header";
+import Layout from "../Layout/Layout";
 
 const Contacts = () => {
-  return (
-      <div>
-          <Header/>
-          <div>
-              Contacts page...
-          </div>
-      </div>
-  );
+    return (
+        <Layout>
+            Contacts page...
+        </Layout>
+    );
 };
 
 export default Contacts;

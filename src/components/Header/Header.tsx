@@ -8,14 +8,16 @@ class Header extends React.Component {
     render = () => (
         <header>
             <User/>
-            <ul>
-                <li>
-                    <Link to="/">Главная страница</Link>
-                </li>
-                <li>
-                    <Link to="/contacts">Контакты</Link>
-                </li>
-            </ul>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/">Главная страница</Link>
+                    </li>
+                    <li>
+                        <Link to="/contacts">Контакты</Link>
+                    </li>
+                </ul>
+            </nav>
         </header>
     )
 }
