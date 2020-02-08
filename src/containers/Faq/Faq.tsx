@@ -1,14 +1,12 @@
 import React from 'react';
-import './Contacts.scss';
-import "@vkontakte/vkui/dist/vkui.css";
 // @ts-ignore
 import {Group, Cell, Header} from "@vkontakte/vkui";
 import Layout from "../Layout/Layout";
 
-const Contacts = () => {
+const Faq = () => {
     return (
         <Layout>
-            <Group header={<Header mode="secondary">Items</Header>}>
+            <Group header={<Header mode="secondary">Faq</Header>}>
                 <Cell>Hello</Cell>
                 <Cell>World</Cell>
             </Group>
@@ -17,4 +15,4 @@ const Contacts = () => {
     );
 };
 
-export default Contacts;
+export default Faq;

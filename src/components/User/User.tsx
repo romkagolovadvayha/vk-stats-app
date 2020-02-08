@@ -2,6 +2,8 @@ import React from "react";
 // @ts-ignore
 import {connect} from "react-redux";
 import {getUserInfo} from "../../redux/actions/userActions";
+import {Avatar, PanelHeaderContent} from "@vkontakte/vkui";
+import './User.scss';
 
 class User extends React.Component {
 
@@ -24,9 +26,16 @@ class User extends React.Component {
         // @ts-ignore
         const {loadingUser, user} = this.props;
         return (
-            <div>
+            <div className="User">
                 {loadingUser && <div>Загрузка...</div>}
-                {user.first_name && <div>Здравствуйте, {user.first_name} {user.last_name}!</div>}
+                {user.first_name && <PanelHeaderContent
+                    status="Добро пожаловать!"
+                    before={<Avatar size={36}
+                                    src={user.photo_100}/>}
+                    aside=""
+                >
+                    {user.first_name} {user.last_name}
+                </PanelHeaderContent>}
             </div>
         );
     }

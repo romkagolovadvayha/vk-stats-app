@@ -8,10 +8,11 @@ import {Provider} from "react-redux";
 import configureStore from "./redux/configureStore";
 import Home from "./containers/Home/Home";
 import Contacts from "./containers/Contacts/Contacts";
+import Faq from "./containers/Faq/Faq";
+import Groups from "./containers/Groups/Groups";
 import NotFoundPage from "./containers/NotFoundPage/NotFoundPage";
 
 import './index.scss';
-import Header from "./components/Header/Header";
 
 const store = configureStore();
 
@@ -22,6 +23,8 @@ ReactDOM.render((
         <Router history={history}>
             <Route exact path='/' component={Home}/>
             <Route exact path='/contacts' component={Contacts}/>
+            <Route exact path='/faq' component={Faq}/>
+            <Route exact path='/groups' component={Groups}/>
             <Route component={NotFoundPage}/>
         </Router>
     </Provider>
