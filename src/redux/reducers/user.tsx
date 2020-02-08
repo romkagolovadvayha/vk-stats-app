@@ -1,5 +1,5 @@
 const initialState = {
-    loadingUser: true
+    loadingUser: false
 };
 
 const user = (state = initialState, action: any) => {

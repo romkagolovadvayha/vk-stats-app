@@ -7,26 +7,31 @@ class User extends React.Component {
 
     constructor(props: any) {
         super(props);
+        this.getUser();
     }
 
-    private getUser = async (e: any) => {
-        e.preventDefault();
+    private getUser = async () => {
         // @ts-ignore
-        const { getUserInfo } = this.props;
-        console.log('getUser');
+        const {getUserInfo} = this.props;
         await getUserInfo();
     };
 
-    render = () => (
-        <button onClick={(e: any) => this.getUser(e)}>
-            Загрузить пользователя
-        </button>
-    )
+    render = () => {
+        // @ts-ignore
+        const {loadingUser, user} = this.props;
+        return (
+            <div>
+                {loadingUser && <div>Загрузка...</div>}
+                {user.first_name && <div>Здравствуйте, {user.first_name} {user.last_name}!</div>}
+            </div>
+        );
+    }
 }
 
 const mapStateToProps = (state: any) => ({
     state,
-    user: state.userState
+    user: state.user,
+    loadingUser: state.user.loadingUser,
 });
 
 const mapDispatchToProps = (dispatch: any) => ({
