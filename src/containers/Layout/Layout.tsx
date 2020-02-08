@@ -1,6 +1,5 @@
 import React from 'react';
-import {Panel, View} from "@vkontakte/vkui";
-import Header from "../../components/Header/Header";
+import {Panel} from "@vkontakte/vkui";
 import FooterMenu from "../../components/FooterMenu/FooterMenu";
 
 const Layout = (props: any) => {
