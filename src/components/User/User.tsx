@@ -9,26 +9,29 @@ class User extends React.Component {
         super(props);
     }
 
-    private activateLasers = async (e: any) => {
+    private getUser = async (e: any) => {
         e.preventDefault();
-        await this.props.getUserInfo();
+        // @ts-ignore
+        const { getUserInfo } = this.props;
+        console.log('getUser');
+        await getUserInfo();
     };
 
     render = () => (
-        <button onClick={(e: any) => this.activateLasers(e)}>
-            Активировать лазеры
+        <button onClick={(e: any) => this.getUser(e)}>
+            Загрузить пользователя
         </button>
     )
 }
-
-const mapDispatchToProps = (dispatch: any) => ({
-    dispatch,
-    getUserInfo: () => dispatch(getUserInfo()),
-});
 
 const mapStateToProps = (state: any) => ({
     state,
     user: state.userState
 });
 
-export default connect(mapDispatchToProps, mapStateToProps)(User);
+const mapDispatchToProps = (dispatch: any) => ({
+    dispatch,
+    getUserInfo: () => dispatch(getUserInfo()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(User);
