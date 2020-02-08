@@ -5,22 +5,30 @@ import {getUserInfo} from "../../redux/actions/userActions";
 
 class User extends React.Component {
 
-    private activateLasers = (e: any) => {
+    constructor(props: any) {
+        super(props);
+    }
+
+    private activateLasers = async (e: any) => {
         e.preventDefault();
-        console.log('По ссылке кликнули.');
+        await this.props.getUserInfo();
     };
 
     render = () => (
-        <button onClick={this.activateLasers}>
+        <button onClick={(e: any) => this.activateLasers(e)}>
             Активировать лазеры
         </button>
     )
 }
 
-const mapStateToProps = function (store: any) {
-    return {
-        users: store.userState
-    };
-};
+const mapDispatchToProps = (dispatch: any) => ({
+    dispatch,
+    getUserInfo: () => dispatch(getUserInfo()),
+});
 
-export default connect(mapStateToProps)(User);
+const mapStateToProps = (state: any) => ({
+    state,
+    user: state.userState
+});
+
+export default connect(mapDispatchToProps, mapStateToProps)(User);

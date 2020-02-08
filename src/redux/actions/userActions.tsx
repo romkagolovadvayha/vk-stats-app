@@ -1,13 +1,11 @@
 // @ts-ignore
 import connect from "@vkontakte/vk-connect";
 
-export const getUserInfo = () =>  (dispatch: any) => {
-    console.log('getUserInfo');
+export const getUserInfo = () => async (dispatch: any) => {
     dispatch({type: "GET_USER_INFO_REQ"});
 
     try {
-        const req =  connect.sendPromise("VKWebAppGetUserInfo");
-        console.log(req);
+        const req = await connect.sendPromise("VKWebAppGetUserInfo");
         dispatch({type: "GET_USER_INFO_RES", payload: req});
         return req;
     } catch (error) {
