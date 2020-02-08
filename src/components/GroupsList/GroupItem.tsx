@@ -12,10 +12,6 @@ export interface GroupItemProps {
 
 class GroupItem extends React.Component<GroupItemProps> {
 
-    constructor(props: GroupItemProps) {
-        super(props);
-    }
-
     render = () => {
         const {id, photo, removeHandler} = this.props;
         return (
