@@ -7,7 +7,11 @@ class User extends React.Component {
 
     constructor(props: any) {
         super(props);
-        this.getUser();
+        // @ts-ignore
+        const {user} = this.props;
+        if (!user.first_name) {
+            this.getUser();
+        }
     }
 
     private getUser = async () => {
