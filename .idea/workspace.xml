@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7db8ce06-a9ae-4a06-b3d3-6029bc3989ef" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vk-stats-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="7db8ce06-a9ae-4a06-b3d3-6029bc3989ef" name="Default Changelist" comment="conflicts">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,17 +54,44 @@
       <workItem from="1581240643818" duration="399000" />
       <workItem from="1581241043720" duration="58000" />
       <workItem from="1581241103481" duration="114000" />
+      <workItem from="1581241216918" duration="242000" />
     </task>
+    <task id="LOCAL-00001" summary="conflicts">
+      <created>1581241309615</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1581241309615</updated>
+    </task>
+    <task id="LOCAL-00002" summary="conflicts">
+      <created>1581241319681</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581241319681</updated>
+    </task>
+    <task id="LOCAL-00003" summary="conflicts">
+      <created>1581241391450</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1581241391450</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="conflicts" />
+    <option name="LAST_COMMIT_MESSAGE" value="conflicts" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="248" y="27" width="860" height="700" key="CommitChangelistDialog2" timestamp="1581241319610">
+    <state x="248" y="27" width="860" height="700" key="CommitChangelistDialog2" timestamp="1581241407887">
       <screen x="0" y="27" width="1366" height="700" />
     </state>
-    <state x="248" y="27" width="860" height="700" key="CommitChangelistDialog2/0.27.1366.700@0.27.1366.700" timestamp="1581241319610" />
+    <state x="248" y="27" width="860" height="700" key="CommitChangelistDialog2/0.27.1366.700@0.27.1366.700" timestamp="1581241407887" />
     <state x="466" y="134" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581241214836">
       <screen x="0" y="27" width="1366" height="700" />
     </state>
@@ -78,9 +104,9 @@
       <screen x="0" y="27" width="1366" height="700" />
     </state>
     <state x="388" y="92" width="580" height="568" key="MultipleFileMergeDialog/0.27.1366.700@0.27.1366.700" timestamp="1581241089670" />
-    <state x="278" y="112" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1581241341480">
+    <state x="278" y="112" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1581241392728">
       <screen x="0" y="27" width="1366" height="700" />
     </state>
-    <state x="278" y="112" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1366.700@0.27.1366.700" timestamp="1581241341480" />
+    <state x="278" y="112" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1366.700@0.27.1366.700" timestamp="1581241392728" />
   </component>
 </project>
