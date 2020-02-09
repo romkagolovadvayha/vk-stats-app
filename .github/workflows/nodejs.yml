@@ -17,7 +17,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: git remote add origin https://SECRET_USERNAME:SECRET_PASSWORD@github.com/SECRET_USERNAME/vk-stats-app.git
+      - run: git remote add origin https://${{ secrets.SECRET_USERNAME }}:${{ secrets.SECRET_PASSWORD }}@github.com/${{ secrets.SECRET_USERNAME }}/vk-stats-app.git
       - run: git config --global user.email "rom_ik@bk.ru"
       - run: git config --global user.name "Roman Mescheryakov"
       - run: git config --list
