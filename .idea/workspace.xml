@@ -3,26 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e1112b30-e7fc-43c1-b53b-e88b25094ac9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logo512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/precache-manifest.497b3008ce5cca8db7404a813fa4bba9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/service-worker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/2.73d444c6.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/2.73d444c6.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.ee5631fe.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/main.ee5631fe.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/2.a0b05c19.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/2.a0b05c19.chunk.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/2.a0b05c19.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.c03ab373.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/main.c03ab373.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/runtime-main.40c11b4b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/runtime-main.40c11b4b.js.map" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +17,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectId" id="1XZC7Ec7wtFWvyCx3ZhVLZ6mfYN" />
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
@@ -56,7 +39,14 @@
       <option name="project" value="LOCAL" />
       <updated>1581242337792</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="build">
+      <created>1581242572407</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581242572407</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -75,17 +65,33 @@
     <option name="LAST_COMMIT_MESSAGE" value="build" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="27" width="1081" height="700" key="CommitChangelistDialog2" timestamp="1581242337584">
+    <state x="137" y="27" width="1081" height="700" key="CommitChangelistDialog2" timestamp="1581242572214">
       <screen x="0" y="27" width="1366" height="700" />
     </state>
-    <state x="137" y="27" width="1081" height="700" key="CommitChangelistDialog2/0.27.1366.700@0.27.1366.700" timestamp="1581242337584" />
+    <state x="137" y="27" width="1081" height="700" key="CommitChangelistDialog2/0.27.1366.700@0.27.1366.700" timestamp="1581242572214" />
     <state x="466" y="134" width="424" height="484" key="FileChooserDialogImpl" timestamp="1581242137923">
       <screen x="0" y="27" width="1366" height="700" />
     </state>
     <state x="466" y="134" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.700@0.27.1366.700" timestamp="1581242137923" />
-    <state x="278" y="100" width="800" height="552" key="Vcs.Push.Dialog.v2" timestamp="1581242339339">
+    <state width="1320" height="162" key="GridCell.Tab.0.bottom" timestamp="1581242704946">
       <screen x="0" y="27" width="1366" height="700" />
     </state>
-    <state x="278" y="100" width="800" height="552" key="Vcs.Push.Dialog.v2/0.27.1366.700@0.27.1366.700" timestamp="1581242339339" />
+    <state width="1320" height="162" key="GridCell.Tab.0.bottom/0.27.1366.700@0.27.1366.700" timestamp="1581242704946" />
+    <state width="1320" height="162" key="GridCell.Tab.0.center" timestamp="1581242704945">
+      <screen x="0" y="27" width="1366" height="700" />
+    </state>
+    <state width="1320" height="162" key="GridCell.Tab.0.center/0.27.1366.700@0.27.1366.700" timestamp="1581242704945" />
+    <state width="1320" height="162" key="GridCell.Tab.0.left" timestamp="1581242704945">
+      <screen x="0" y="27" width="1366" height="700" />
+    </state>
+    <state width="1320" height="162" key="GridCell.Tab.0.left/0.27.1366.700@0.27.1366.700" timestamp="1581242704945" />
+    <state width="1320" height="162" key="GridCell.Tab.0.right" timestamp="1581242704945">
+      <screen x="0" y="27" width="1366" height="700" />
+    </state>
+    <state width="1320" height="162" key="GridCell.Tab.0.right/0.27.1366.700@0.27.1366.700" timestamp="1581242704945" />
+    <state x="278" y="100" width="800" height="552" key="Vcs.Push.Dialog.v2" timestamp="1581242573810">
+      <screen x="0" y="27" width="1366" height="700" />
+    </state>
+    <state x="278" y="100" width="800" height="552" key="Vcs.Push.Dialog.v2/0.27.1366.700@0.27.1366.700" timestamp="1581242573810" />
   </component>
 </project>
