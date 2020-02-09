@@ -12,17 +12,18 @@ jobs:
         node-version: [10.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: npm install, build, and test
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: git config --global user.email "rom_ik@bk.ru"
-    - run: git config --global user.name "Roman Mescheryakov"
-    - run: git config --list
-    - run: npm install
-    - run: npm run build
-    - run: npm install --save gh-pages
-    - run: npm run deploy
-      env:
-        CI: true
+      - uses: actions/checkout@v2
+      - name: npm install, build, and test
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: git remote add origin https://SECRET_USERNAME:SECRET_PASSWORD@github.com/SECRET_USERNAME/vk-stats-app.git
+      - run: git config --global user.email "rom_ik@bk.ru"
+      - run: git config --global user.name "Roman Mescheryakov"
+      - run: git config --list
+      - run: npm install
+      - run: npm run build
+      - run: npm install --save gh-pages
+      - run: npm run deploy
+        env:
+          CI: true
