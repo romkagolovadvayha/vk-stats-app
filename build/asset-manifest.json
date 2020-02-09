@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/vk-stats-app/build/static/css/main.ee5631fe.chunk.css",
+    "main.js": "/vk-stats-app/build/static/js/main.1c1a8e7c.chunk.js",
+    "main.js.map": "/vk-stats-app/build/static/js/main.1c1a8e7c.chunk.js.map",
+    "runtime-main.js": "/vk-stats-app/build/static/js/runtime-main.13aab91f.js",
+    "runtime-main.js.map": "/vk-stats-app/build/static/js/runtime-main.13aab91f.js.map",
+    "static/css/2.73d444c6.chunk.css": "/vk-stats-app/build/static/css/2.73d444c6.chunk.css",
+    "static/js/2.5d7408c0.chunk.js": "/vk-stats-app/build/static/js/2.5d7408c0.chunk.js",
+    "static/js/2.5d7408c0.chunk.js.map": "/vk-stats-app/build/static/js/2.5d7408c0.chunk.js.map",
+    "index.html": "/vk-stats-app/build/index.html",
+    "precache-manifest.9da44d7a23191971ab3b13981596989c.js": "/vk-stats-app/build/precache-manifest.9da44d7a23191971ab3b13981596989c.js",
+    "service-worker.js": "/vk-stats-app/build/service-worker.js",
+    "static/css/2.73d444c6.chunk.css.map": "/vk-stats-app/build/static/css/2.73d444c6.chunk.css.map",
+    "static/css/main.ee5631fe.chunk.css.map": "/vk-stats-app/build/static/css/main.ee5631fe.chunk.css.map",
+    "static/js/2.5d7408c0.chunk.js.LICENSE.txt": "/vk-stats-app/build/static/js/2.5d7408c0.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.13aab91f.js",
+    "static/css/2.73d444c6.chunk.css",
+    "static/js/2.5d7408c0.chunk.js",
+    "static/css/main.ee5631fe.chunk.css",
+    "static/js/main.1c1a8e7c.chunk.js"
+  ]
+}
