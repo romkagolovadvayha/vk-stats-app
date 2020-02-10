@@ -31,6 +31,6 @@ jobs:
       - run: git status
       - run: git commit -m "added CNAME file"
       - run: git status
-      - run: git push -u origin gh-pages
+      - run: git push
         env:
           CI: true
