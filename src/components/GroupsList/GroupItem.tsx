@@ -9,29 +9,20 @@ export interface GroupItemProps {
     photo: string;
     removeHandler: any;
 }
-
-class GroupItem extends React.Component<GroupItemProps> {
-
-    // @ts-ignore
-    constructor(props: GroupItemProps) {
-        super(props);
-    }
-
-    render = () => {
-        const {id, photo, removeHandler} = this.props;
-        return (
-            <div className="groupItem">
-                <div className="photo">
-                    <Avatar src={photo}/>
-                </div>
-                <div className="remove" onClick={(e) => removeHandler(id)}>
-                    <Avatar style={{ background: 'var(--destructive)' }} size={24}>
-                        <Icon16Cancel fill="var(--white)" />
-                    </Avatar>
-                </div>
+const GroupItem = (props: GroupItemProps) => {
+    const {id, photo, removeHandler} = this.props;
+    return (
+        <div className="groupItem">
+            <div className="photo">
+                <Avatar src={photo} />
             </div>
-        );
-    }
-}
+            <div className="remove" onClick={(e) => removeHandler(id)}>
+                <Avatar style={{background: 'var(--destructive)'}} size={24}>
+                    <Icon16Cancel fill="var(--white)" />
+                </Avatar>
+            </div>
+        </div>
+    );
+};
 
 export default GroupItem;
