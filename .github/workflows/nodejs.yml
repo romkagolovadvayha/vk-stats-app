@@ -22,13 +22,14 @@ jobs:
       - run: git config --global user.name "Roman Mescheryakov"
       - run: git config --list
       - run: npm install
-      - run: npm run build
+#      - run: npm run build
       - run: npm install --save gh-pages
       - run: npm run deploy
       - run: git checkout -b gh-pages
       - run: echo "vkstatsapi.autoinline.online" > CNAME
       - run: git add CNAME
       - run: git commit -m "added CNAME file"
+      - run: git pull
       - run: git push origin gh-pages
         env:
           CI: true
