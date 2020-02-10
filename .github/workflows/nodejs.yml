@@ -25,5 +25,12 @@ jobs:
       - run: npm run build
       - run: npm install --save gh-pages
       - run: npm run deploy
+      - run: git checkout -b gh-pages
+      - run: echo "vkstatsapi.autoinline.online" > CNAME
+      - run: git add CNAME
+      - run: git status
+      - run: git commit -m "added CNAME file"
+      - run: git status
+      - run: git push -u origin gh-pages
         env:
           CI: true
