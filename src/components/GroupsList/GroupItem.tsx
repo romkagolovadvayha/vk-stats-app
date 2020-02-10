@@ -10,7 +10,7 @@ export interface GroupItemProps {
     removeHandler: any;
 }
 const GroupItem = (props: GroupItemProps) => {
-    const {id, photo, removeHandler} = this.props;
+    const {id, photo, removeHandler} = props;
     return (
         <div className="groupItem">
             <div className="photo">
