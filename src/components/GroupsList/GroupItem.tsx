@@ -12,6 +12,7 @@ export interface GroupItemProps {
 
 class GroupItem extends React.Component<GroupItemProps> {
 
+    // @ts-ignore
     constructor(props: GroupItemProps) {
         super(props);
     }
