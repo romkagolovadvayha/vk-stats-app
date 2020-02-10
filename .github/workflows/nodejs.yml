@@ -23,7 +23,7 @@ jobs:
       - run: git config --list
       - run: npm install
       - run: npm run build
-      - run: npm install --save gh-pages
-      - run: npm run deploy
+#      - run: npm install --save gh-pages
+#      - run: npm run deploy
         env:
           CI: true
