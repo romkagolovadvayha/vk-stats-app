@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 // @ts-ignore
 import {Router, Route, browserHistory} from "react-router";
 // @ts-ignore
+import connect from "@vkontakte/vk-connect";
+// @ts-ignore
 import {syncHistoryWithStore} from "react-router-redux";
 import {Provider} from "react-redux";
 import configureStore from "./redux/configureStore";
@@ -17,6 +19,8 @@ import './index.scss';
 const store = configureStore();
 
 const history = syncHistoryWithStore(browserHistory, store);
+
+connect.send("VKWebAppInit", {});
 
 ReactDOM.render((
     <Provider store={store}>
