@@ -29,7 +29,7 @@ jobs:
       - run: echo "vkstatsapi.autoinline.online" > CNAME
       - run: git add CNAME
       - run: git commit -m "added CNAME file"
-      - run: git pull
+      - run: git pull origin gh-pages
       - run: git push origin gh-pages
         env:
           CI: true
