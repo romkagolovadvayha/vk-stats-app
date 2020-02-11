@@ -2,7 +2,7 @@ import React from "react";
 // @ts-ignore
 import {connect} from "react-redux";
 import {getUserInfo} from "../../redux/actions/userActions";
-import {Avatar, PanelHeaderContent} from "@vkontakte/vkui";
+import {Avatar, Spinner, PanelHeaderContent} from "@vkontakte/vkui";
 import './User.scss';
 
 class User extends React.Component {
@@ -27,7 +27,7 @@ class User extends React.Component {
         const {loadingUser, user} = this.props;
         return (
             <div className="User">
-                {loadingUser && <div>Загрузка...</div>}
+                {loadingUser && <Spinner size="medium" />}
                 {user.first_name && <PanelHeaderContent
                     status="Добро пожаловать!"
                     before={<Avatar size={36}

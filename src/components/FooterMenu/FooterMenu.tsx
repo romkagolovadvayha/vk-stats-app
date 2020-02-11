@@ -46,19 +46,6 @@ class FooterMenu extends React.Component {
                 ><Icon28Newsfeed/></TabbarItem>
                 <TabbarItem
                     onClick={(e: any) => this.onStoryChange(e)}
-                    selected={activeStory === '/contacts'}
-                    data-story="/contacts"
-                    label="12"
-                    text="Сообщения"
-                ><Icon28Newsfeed/></TabbarItem>
-                <TabbarItem
-                    onClick={(e: any) => this.onStoryChange(e)}
-                    selected={activeStory === '/contacts'}
-                    data-story="/contacts"
-                    text="Уведомлен."
-                ><Icon28Newsfeed/></TabbarItem>
-                <TabbarItem
-                    onClick={(e: any) => this.onStoryChange(e)}
                     selected={activeStory === '/faq'}
                     data-story="/faq"
                     text="Помощь"

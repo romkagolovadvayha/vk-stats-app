@@ -8,6 +8,7 @@ import Icon24Add from '@vkontakte/icons/dist/24/add';
 import Icon24Settings from '@vkontakte/icons/dist/24/settings';
 import GroupItem from "./GroupItem";
 import './GroupsList.scss';
+import {setPopoutApp} from "../../redux/actions";
 
 class GroupsList extends React.Component {
     public state: any;
@@ -15,7 +16,6 @@ class GroupsList extends React.Component {
     constructor(props: any) {
         super(props);
         this.state = {
-            popout: null,
             groups: [
                 {id: 1, photo: 'https://pp.userapi.com/c841034/v841034569/3b8c1/pt3sOw_qhfg.jpg'},
                 {id: 2, photo: 'https://pp.userapi.com/c841034/v841034569/3b8c1/pt3sOw_qhfg.jpg'},
@@ -32,15 +32,14 @@ class GroupsList extends React.Component {
     }
 
     private openIcons() {
-        this.setState({
-            popout:
-                <ActionSheet onClose={() => this.setState({popout: null})}>
-                    <ActionSheetItem key="add" autoclose before={<Icon24Add/>}>
-                        Добавить сообщество/пользователя
-                    </ActionSheetItem>
-                    <ActionSheetItem key="cancel" autoclose mode="cancel">Отменить</ActionSheetItem>
-                </ActionSheet>
-        });
+        // @ts-ignore
+        const {setPopoutApp} = this.props;
+        setPopoutApp(<ActionSheet onClose={() => this.closePopout()}>
+            <ActionSheetItem key="add" autoclose before={<Icon24Add/>}>
+                Добавить сообщество/пользователя
+            </ActionSheetItem>
+            <ActionSheetItem key="cancel" autoclose mode="cancel">Отменить</ActionSheetItem>
+        </ActionSheet>);
     }
 
     public removeItem(id: number) {
@@ -49,7 +48,10 @@ class GroupsList extends React.Component {
     }
 
     private closePopout() {
-        this.setState({popout: null});
+        console.log('closePopout');
+        // @ts-ignore
+        const {setPopoutApp} = this.props;
+        setPopoutApp(false);
     }
 
     private removeHandler(id: number) {
@@ -57,56 +59,54 @@ class GroupsList extends React.Component {
     }
 
     private openDestructive(id: number) {
-        this.setState({
-            popout:
-                <Alert
-                    actionsLayout="vertical"
-                    actions={[{
-                        title: 'Удалить',
-                        autoclose: true,
-                        mode: 'destructive',
-                        action: () => this.removeItem(id),
-                    }, {
-                        title: 'Отмена',
-                        autoclose: true,
-                        mode: 'cancel'
-                    }]}
-                    onClose={this.closePopout}
-                >
-                    <h2>Удалить?</h2>
-                    <p>Вы уверены, что хотите удалить из списка?</p>
-                </Alert>
-        });
+        // @ts-ignore
+        const {setPopoutApp} = this.props;
+        setPopoutApp(<Alert
+            actionsLayout="vertical"
+            actions={[{
+                title: 'Удалить',
+                autoclose: true,
+                mode: 'destructive',
+                action: () => this.removeItem(id),
+            }, {
+                title: 'Отмена',
+                autoclose: true,
+                mode: 'cancel'
+            }]}
+            onClose={this.closePopout}
+        >
+            <h2>Удалить?</h2>
+            <p>Вы уверены, что хотите удалить из списка?</p>
+        </Alert>);
     }
 
     render = () => {
-        const {popout, groups} = this.state;
+        const {groups} = this.state;
         return (
-            <View popout={popout} header={false} activePanel={"groupsList"}>
-                <Panel id="groupsList" separator={false}>
-                    <CellButton onClick={this.openIcons} before={<Icon24Settings/>}>Управление</CellButton>
-                    <Separator wide/>
-                    <div className="groupsList">
-                        {groups.map((group: any) => (
-                            <GroupItem key={group.id}
-                                       photo={group.photo}
-                                       id={group.id}
-                                       removeHandler={this.removeHandler}/>
-                        ))}
-                    </div>
-                </Panel>
-            </View>
+            <div>
+                <CellButton onClick={this.openIcons} before={<Icon24Settings/>}>Управление</CellButton>
+                <Separator wide/>
+                <div className="groupsList">
+                    {groups.map((group: any) => (
+                        <GroupItem key={group.id}
+                                   photo={group.photo}
+                                   id={group.id}
+                                   removeHandler={this.removeHandler}/>
+                    ))}
+                </div>
+            </div>
         );
     }
 }
 
 const mapStateToProps = (state: any) => ({
     state,
-    activeStory: state.activeStory,
+    popout: state.popoutApp.popout,
 });
 
 const mapDispatchToProps = (dispatch: any) => ({
     dispatch,
+    setPopoutApp: (block: any) => dispatch(setPopoutApp(block)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(GroupsList);

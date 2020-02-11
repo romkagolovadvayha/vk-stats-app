@@ -2,5 +2,30 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 10px;
+}
+
+//.navigationList {
+//  > a {
+//    display: block;
+//    + a {
+//      border-top: solid 1px #d7d8d9;
+//    }
+//  }
+//
+//  //@media screen and (min-width: 790px) {
+//  //  display: flex;
+//  //  justify-content: space-between;
+//  //  flex-wrap: wrap;
+//  //  > a {
+//  //    width: 50%;
+//  //    border-top: none !important;
+//  //  }
+//  //}
+//}
+
+section.Group {
+  margin-bottom: 0;
+  .Group__content:first-child {
+    margin-top: 0;
+  }
 }
