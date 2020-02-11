@@ -1,7 +1,7 @@
 import React from "react";
 // @ts-ignore
 import {connect} from "react-redux";
-import {ActionSheet, ActionSheetItem, CellButton, View, Separator, Alert, Panel} from "@vkontakte/vkui";
+import {ActionSheet, ActionSheetItem, CellButton, Separator, Alert} from "@vkontakte/vkui";
 // @ts-ignore
 import Icon24Add from '@vkontakte/icons/dist/24/add';
 // @ts-ignore
