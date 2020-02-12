@@ -6,6 +6,9 @@ import {Link} from "react-router";
 import User from "../../components/User/User";
 import Balance from "../../components/User/Balance";
 import {Separator, List, Cell, Group, Gallery, PanelHeader, Div} from "@vkontakte/vkui";
+import slider1 from './images/1.png';
+import slider2 from './images/2.png';
+import slider3 from './images/3.png';
 
 // @ts-ignore
 import Icon24User from '@vkontakte/icons/dist/24/user';
@@ -27,9 +30,9 @@ class Home extends React.Component {
                         style={{height: 150}}
                         bullets="dark"
                     >
-                        <div style={{backgroundImage: './images/1.jpg'}}/>
-                        <div style={{backgroundImage: './images/2.jpg'}}/>
-                        <div style={{backgroundImage: './images/3.jpg'}}/>
+                        <div style={{backgroundImage: `url(${slider1})`}}/>
+                        <div style={{backgroundImage: `url(${slider2})`}}/>
+                        <div style={{backgroundImage: `url(${slider3})`}}/>
                     </Gallery>
                 </Group>
                 <List className="navigationList">
