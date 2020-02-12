@@ -26,8 +26,8 @@ class Home extends React.Component {
                 </Div>
                 <Group header={false}>
                     <Gallery
-                        slideWidth="90%"
-                        style={{height: 150}}
+                        slideWidth="100%"
+                        style={{height: 200}}
                         bullets="dark"
                     >
                         <div className="slide" style={{backgroundImage: `url(${slider1})`}}/>
