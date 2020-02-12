@@ -30,9 +30,9 @@ class Home extends React.Component {
                         style={{height: 150}}
                         bullets="dark"
                     >
-                        <div style={{backgroundImage: `url(${slider1})`}}/>
-                        <div style={{backgroundImage: `url(${slider2})`}}/>
-                        <div style={{backgroundImage: `url(${slider3})`}}/>
+                        <div className="slide" style={{backgroundImage: `url(${slider1})`}}/>
+                        <div className="slide" style={{backgroundImage: `url(${slider2})`}}/>
+                        <div className="slide" style={{backgroundImage: `url(${slider3})`}}/>
                     </Gallery>
                 </Group>
                 <List className="navigationList">
