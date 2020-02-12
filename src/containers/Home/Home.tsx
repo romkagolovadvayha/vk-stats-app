@@ -27,9 +27,9 @@ class Home extends React.Component {
                         style={{height: 150}}
                         bullets="dark"
                     >
-                        <div style={{backgroundColor: 'var(--destructive)'}}/>
-                        <div style={{backgroundColor: 'var(--button_commerce_background)'}}/>
-                        <div style={{backgroundColor: 'var(--accent)'}}/>
+                        <div style={{backgroundImage: './images/1.jpg'}}/>
+                        <div style={{backgroundImage: './images/2.jpg'}}/>
+                        <div style={{backgroundImage: './images/3.jpg'}}/>
                     </Gallery>
                 </Group>
                 <List className="navigationList">
