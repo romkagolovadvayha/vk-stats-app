@@ -1,6 +1,6 @@
 import React from "react";
 import {Avatar} from "@vkontakte/vkui";
-import './GroupItem.scss';
+import './Styles.scss';
 // @ts-ignore
 import Icon16Cancel from '@vkontakte/icons/dist/16/cancel';
 
@@ -9,7 +9,7 @@ export interface GroupItemProps {
     photo: string;
     removeHandler: any;
 }
-const GroupItem = (props: GroupItemProps) => {
+const Presenter = (props: GroupItemProps) => {
     const {id, photo, removeHandler} = props;
     return (
         <div className="groupItem">
@@ -25,4 +25,4 @@ const GroupItem = (props: GroupItemProps) => {
     );
 };
 
-export default GroupItem;
+export default Presenter;

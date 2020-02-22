@@ -1,7 +1,7 @@
 import React from "react";
 // @ts-ignore
 import {connect} from "react-redux";
-import {getUserInfo} from "../../redux/actions/userActions";
+import {getUserInfo} from "../../redux/actions";
 import {Avatar, Spinner, PanelHeaderContent} from "@vkontakte/vkui";
 import './User.scss';
 

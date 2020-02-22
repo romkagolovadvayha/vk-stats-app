@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.scss';
+import './Styles.scss';
 import Layout from "../Layout";
 // @ts-ignore
 import {Link} from "react-router";
@@ -15,8 +15,19 @@ import Icon24User from '@vkontakte/icons/dist/24/user';
 // @ts-ignore
 import Icon24Users from '@vkontakte/icons/dist/24/users';
 
-class Home extends React.Component {
-    render() {
+class Presenter extends React.Component {
+    constructor(props: any) {
+        super(props);
+        this.fetchData();
+    }
+
+    fetchData() {
+        // @ts-ignore
+        const { getAuthToken } = this.props;
+        getAuthToken();
+    }
+
+    render = () => {
         return (
             <Layout id="home">
                 <PanelHeader>Анализ вконтакте</PanelHeader>
@@ -46,7 +57,7 @@ class Home extends React.Component {
                 </List>
             </Layout>
         );
-    };
+    }
 }
 
-export default Home;
+export default Presenter;

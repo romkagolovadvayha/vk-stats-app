@@ -8,10 +8,10 @@ import connect from "@vkontakte/vk-connect";
 import {syncHistoryWithStore} from "react-router-redux";
 import {Provider} from "react-redux";
 import configureStore from "./redux/configureStore";
-import Home from "./containers/Home/Home";
+import Home from "./containers/Home";
 import Contacts from "./containers/Contacts/Contacts";
 import Faq from "./containers/Faq/Faq";
-import Groups from "./containers/Groups/Groups";
+import Presenter from "./containers/Groups";
 import NotFoundPage from "./containers/NotFoundPage/NotFoundPage";
 
 import './index.scss';
@@ -28,7 +28,7 @@ ReactDOM.render((
             <Route exact path='/' component={Home}/>
             <Route exact path='/contacts' component={Contacts}/>
             <Route exact path='/faq' component={Faq}/>
-            <Route exact path='/groups' component={Groups}/>
+            <Route exact path='/groups' component={Presenter}/>
             <Route component={NotFoundPage}/>
         </Router>
     </Provider>

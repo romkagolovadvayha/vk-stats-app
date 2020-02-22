@@ -1,16 +1,14 @@
 import React from "react";
-// @ts-ignore
-import {connect} from "react-redux";
 import {ActionSheet, ActionSheetItem, CellButton, Separator, Alert} from "@vkontakte/vkui";
 // @ts-ignore
 import Icon24Add from '@vkontakte/icons/dist/24/add';
 // @ts-ignore
 import Icon24Settings from '@vkontakte/icons/dist/24/settings';
-import GroupItem from "./GroupItem";
-import './GroupsList.scss';
-import {setPopoutApp} from "../../redux/actions";
+import GroupItem from "./Item";
+import AddForm from "../AddForm";
+import './Styles.scss';
 
-class GroupsList extends React.Component {
+class Presenter extends React.Component {
     public state: any;
 
     constructor(props: any) {
@@ -29,6 +27,7 @@ class GroupsList extends React.Component {
         this.openDestructive = this.openDestructive.bind(this);
         this.removeItem = this.removeItem.bind(this);
         this.removeHandler = this.removeHandler.bind(this);
+        this.openAddGroupForm = this.openAddGroupForm.bind(this);
     }
 
     private openIcons() {
@@ -80,12 +79,20 @@ class GroupsList extends React.Component {
         </Alert>);
     }
 
+    private openAddGroupForm() {
+        console.log('modal');
+        // @ts-ignore
+        const {setModalApp} = this.props;
+        setModalApp(<AddForm/>);
+    }
+
     render = () => {
         const {groups} = this.state;
         return (
             <div>
                 <CellButton onClick={this.openIcons} before={<Icon24Settings/>}>Управление</CellButton>
                 <Separator wide/>
+                <div onClick={this.openAddGroupForm}>Открыть модальное</div>
                 <div className="groupsList">
                     {groups.map((group: any) => (
                         <GroupItem key={group.id}
@@ -99,14 +106,4 @@ class GroupsList extends React.Component {
     }
 }
 
-const mapStateToProps = (state: any) => ({
-    state,
-    popout: state.popoutApp.popout,
-});
-
-const mapDispatchToProps = (dispatch: any) => ({
-    dispatch,
-    setPopoutApp: (block: any) => dispatch(setPopoutApp(block)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(GroupsList);
+export default Presenter;

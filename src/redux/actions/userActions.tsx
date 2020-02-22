@@ -1,4 +1,3 @@
-// @ts-ignore
 import connect from "@vkontakte/vk-connect";
 
 export const getUserInfo = () => async (dispatch: any) => {
