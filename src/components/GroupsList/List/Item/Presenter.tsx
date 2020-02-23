@@ -13,10 +13,6 @@ export interface GroupItemProps {
 
 class Presenter extends React.Component <GroupItemProps> {
 
-    constructor(props: GroupItemProps) {
-        super(props);
-    }
-
     private getMembersCount(count: number) {
         let str = `${count}`;
         let res = parseFloat((count / 1000000).toFixed(1));
