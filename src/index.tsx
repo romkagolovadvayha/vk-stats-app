@@ -11,7 +11,8 @@ import configureStore from "./redux/configureStore";
 import Home from "./containers/Home";
 import Contacts from "./containers/Contacts/Contacts";
 import Faq from "./containers/Faq/Faq";
-import Presenter from "./containers/Groups";
+import Groups from "./containers/Groups";
+import SecurityUser from "./containers/SecurityUser";
 import NotFoundPage from "./containers/NotFoundPage/NotFoundPage";
 import "@vkontakte/vkui/dist/vkui.css";
 
@@ -29,7 +30,8 @@ ReactDOM.render((
             <Route exact path='/' component={Home}/>
             <Route exact path='/contacts' component={Contacts}/>
             <Route exact path='/faq' component={Faq}/>
-            <Route exact path='/groups' component={Presenter}/>
+            <Route exact path='/groups' component={Groups}/>
+            <Route exact path='/securityUser' component={SecurityUser}/>
             <Route component={NotFoundPage}/>
         </Router>
     </Provider>
