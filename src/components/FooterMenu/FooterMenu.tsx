@@ -5,7 +5,7 @@ import {Tabbar, TabbarItem} from "@vkontakte/vkui";
 // @ts-ignore
 import {browserHistory} from "react-router";
 // @ts-ignore
-import Icon28Newsfeed from '@vkontakte/icons/dist/24/newsfeed';
+import Icon28ChatsOutline from '@vkontakte/icons/dist/28/chats_outline';
 // @ts-ignore
 import Icon24Help from '@vkontakte/icons/dist/24/help';
 // @ts-ignore
@@ -42,8 +42,8 @@ class FooterMenu extends React.Component {
                     onClick={(e: any) => this.onStoryChange(e)}
                     selected={activeStory === '/contacts'}
                     data-story="/contacts"
-                    text="Поиск"
-                ><Icon28Newsfeed/></TabbarItem>
+                    text="Контакты"
+                ><Icon28ChatsOutline/></TabbarItem>
                 <TabbarItem
                     onClick={(e: any) => this.onStoryChange(e)}
                     selected={activeStory === '/faq'}

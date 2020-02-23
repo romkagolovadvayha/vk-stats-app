@@ -4,7 +4,7 @@ import Layout from "../Layout";
 // @ts-ignore
 import {Link} from "react-router";
 import User from "../../components/User/User";
-import Balance from "../../components/User/Balance";
+// import Balance from "../../components/User/Balance";
 import {Separator, List, Cell, PanelHeader, Div} from "@vkontakte/vkui";
 // import slider1 from './images/1.jpg';
 
@@ -31,7 +31,7 @@ class Presenter extends React.Component {
                 <PanelHeader>Анализ вконтакте</PanelHeader>
                 <Div className="profile">
                     <User/>
-                    <Balance/>
+                    {/*<Balance/>*/}
                 </Div>
                 {/*<Group header={false}>*/}
                 {/*    <Gallery*/}

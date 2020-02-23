@@ -3,6 +3,7 @@ import './Styles.scss';
 import {Button, Div, InfoRow, Progress} from "@vkontakte/vkui";
 // @ts-ignore
 import Icon16Users from '@vkontakte/icons/dist/16/users';
+import UserList from "./UserList";
 
 export interface Props {
     items: any[];
@@ -39,7 +40,16 @@ class Presenter extends React.Component <Props, State> {
         let currentCount = 0;
         let intersec: any[] = [];
         for (let i = 0; i < items.length; i++) {
-            let members = await this.getMembersByGroupId(items[i].id, items[i].members_count, allMembersCount, currentCount);
+            let members = [];
+            switch (items[i].type) {
+                case 'group':
+                case 'page':
+                    members = await this.getMembersByGroupId(items[i].id, items[i].members_count, allMembersCount, currentCount);
+                    break;
+                case 'user':
+                    members = await this.getMembersByUserId(items[i].id);
+                    break;
+            }
             members = members.map((item: string) => parseInt(item));
             currentCount += members.length;
             if (intersec.length === 0) {
@@ -93,6 +103,15 @@ class Presenter extends React.Component <Props, State> {
         return members;
     }
 
+    private async getMembersByUserId(id: number) {
+        const delay = (duration: any) => new Promise(resolve => setTimeout(resolve, duration));
+        // @ts-ignore
+        const {token, getExecuteGetFriends} = this.props;
+        let members = await getExecuteGetFriends(id, token.access_token);
+        await delay(334);
+        return members;
+    }
+
     private startProcess() {
         console.log('startProcess');
         this.setState({progress: 0, process: true});
@@ -124,9 +143,7 @@ class Presenter extends React.Component <Props, State> {
                         <Progress value={progress}/>
                     </InfoRow>
                 </Div>}
-                {!process && isStart && <Div>
-                    Найдено общих {intersec.length} участников.
-                </Div>}
+                {!process && isStart && <UserList items={intersec}/>}
             </div>
         );
     }

@@ -5,7 +5,7 @@ import {getAuthToken} from './tokenActions'
 import {getGroups, getGroup, groupReset} from './groupsActions'
 import {getFriends} from './friendsActions'
 import {getResolveScreenName} from './utilsActions'
-import {getExecuteGetMembers} from './executeActions'
+import {getExecuteGetMembers, getExecuteGetFriends} from './executeActions'
 
 export {
     getPopoutApp, setPopoutApp,
@@ -15,5 +15,5 @@ export {
     getGroups, getGroup, groupReset,
     getFriends,
     getResolveScreenName,
-    getExecuteGetMembers,
+    getExecuteGetMembers, getExecuteGetFriends
 };

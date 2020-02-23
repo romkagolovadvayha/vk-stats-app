@@ -7,7 +7,9 @@ const Presenter = (props: any) => {
     return (
         <View popout={popout} modal={modal} activePanel={props.id}>
             <Panel id={props.id}>
-                {props.children}
+                <div style={{paddingBottom: '50px'}}>
+                    {props.children}
+                </div>
                 <FooterMenu/>
             </Panel>
         </View>

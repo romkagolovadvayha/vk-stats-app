@@ -23,6 +23,7 @@ class Presenter extends React.Component {
             photo_50: string,
             screen_name: string,
             members_count?: number
+            type?: string
         }[]
     };
 
@@ -60,10 +61,10 @@ class Presenter extends React.Component {
         switch (response.type) {
             case 'group':
             case 'page':
-                await this.searchGroup(response.object_id);
+                await this.searchGroup(response.object_id, response.type);
                 break;
             case 'user':
-                await this.searchUser(response.object_id);
+                await this.searchUser(response.object_id, response.type);
                 break;
             default:
                 console.log('Не поддерживается');
@@ -80,7 +81,7 @@ class Presenter extends React.Component {
         return false;
     }
 
-    private async searchGroup(objectId: number) {
+    private async searchGroup(objectId: number, type: string) {
         // @ts-ignore
         const {token, getGroup} = this.props;
         let group = await getGroup(objectId, token.access_token);
@@ -92,11 +93,12 @@ class Presenter extends React.Component {
             photo_50: group.photo_50,
             screen_name: group.screen_name,
             members_count: group.members_count,
+            type: type
         };
         this.setState({items: newItems});
     }
 
-    private async searchUser(objectId: number) {
+    private async searchUser(objectId: number, type: string) {
         // @ts-ignore
         const {token, getUser} = this.props;
         let user = await getUser(objectId, token.access_token);
@@ -107,6 +109,7 @@ class Presenter extends React.Component {
             name: `${user.first_name} ${user.last_name}`,
             photo_50: user.photo_50,
             screen_name: user.domain,
+            type: type
         };
         this.setState({items: newItems});
     }
@@ -131,6 +134,7 @@ class Presenter extends React.Component {
                 photo_50: item.photo_50,
                 screen_name: item.screen_name,
                 members_count: item.members_count,
+                type: item.type
             };
         });
         this.setState({items: items.concat(groupsList)});
@@ -149,7 +153,8 @@ class Presenter extends React.Component {
                 id: item.id,
                 name: `${item.first_name} ${item.last_name}`,
                 screen_name: item.domain,
-                photo_50: item.photo_50
+                photo_50: item.photo_50,
+                type: 'user'
             };
         });
         this.setState({items: items.concat(friendsList)});
