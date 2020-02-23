@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from "../Layout";
-import {Button, Div, Input, PanelHeader, Search, Spinner} from "@vkontakte/vkui";
+import {Button, Div, Input, PanelHeader, Spinner} from "@vkontakte/vkui";
 
 class Presenter extends React.Component {
 
