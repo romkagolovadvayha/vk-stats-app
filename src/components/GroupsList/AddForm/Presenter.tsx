@@ -60,6 +60,7 @@ class Presenter extends React.Component {
                 id: item.id,
                 name: item.name,
                 photo_50: item.photo_50,
+                members_count: item.members_count,
             };
         });
         this.setState({items: items.concat(groupsList)});
@@ -77,7 +78,7 @@ class Presenter extends React.Component {
             return {
                 id: item.id,
                 name: item.first_name + ' ' + item.last_name,
-                photo_50: item.photo_50,
+                photo_50: item.photo_50
             };
         });
         this.setState({items: items.concat(friendsList)});
@@ -90,18 +91,18 @@ class Presenter extends React.Component {
         return items.filter(({name}) => name.toLowerCase().indexOf(search.toLowerCase()) > -1);
     }
 
-    private itemsFilter() {
-        // @ts-ignore
-        const {groups} = this.props;
-        console.log(groups);
-    }
-
     private modalBack = () => {
-        console.log('close');
         // @ts-ignore
         const {setModalApp} = this.props;
         setModalApp(false);
         return {};
+    };
+
+    private selectItem = (item: any) => {
+        // @ts-ignore
+        const {addItemHandler} = this.props;
+        addItemHandler(item);
+        this.modalBack();
     };
 
     render() {
@@ -120,7 +121,7 @@ class Presenter extends React.Component {
                         <ModalPageHeader
                             left={<PanelHeaderButton onClick={this.modalBack}><Icon24Cancel/></PanelHeaderButton>}
                         >
-                            Добавить пользователя/группу
+                            Добавить
                         </ModalPageHeader>
                     }>
                     <Search
@@ -133,10 +134,14 @@ class Presenter extends React.Component {
                             <Cell
                                 before={<Avatar size={40}
                                                 src={item.photo_50}/>}
+                                onClick={() => this.selectItem(item)}
                                 key={item.id}
                             >{item.name}</Cell>
                         ))}
                     </List>}
+                    {!loadingItems && search.length === 0 && <Div style={{color: 'gray'}}>
+                        Введите ссылку на сообщество или пользователя.
+                    </Div>}
                 </ModalPage>
             </ModalRoot>
         )

@@ -13,6 +13,7 @@ import Contacts from "./containers/Contacts/Contacts";
 import Faq from "./containers/Faq/Faq";
 import Presenter from "./containers/Groups";
 import NotFoundPage from "./containers/NotFoundPage/NotFoundPage";
+import "@vkontakte/vkui/dist/vkui.css";
 
 import './index.scss';
 

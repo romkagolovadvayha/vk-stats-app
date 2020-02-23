@@ -6,4 +6,14 @@
     top: 8px;
     right: 0;
   }
+  > .membersCount {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+    font-size: 12px;
+    background: #fafbfc;
+    padding: 5px;
+    border-radius: 5px;
+  }
 }
