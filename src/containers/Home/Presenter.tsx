@@ -5,7 +5,7 @@ import Layout from "../Layout";
 import {Link} from "react-router";
 import User from "../../components/User/User";
 import Balance from "../../components/User/Balance";
-import {Separator, List, Cell, Group, Gallery, PanelHeader, Div} from "@vkontakte/vkui";
+import {Separator, List, Cell, PanelHeader, Div} from "@vkontakte/vkui";
 // import slider1 from './images/1.jpg';
 
 // @ts-ignore
