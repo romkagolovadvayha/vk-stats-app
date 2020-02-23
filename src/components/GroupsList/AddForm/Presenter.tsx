@@ -37,7 +37,6 @@ class Presenter extends React.Component {
 
     componentDidMount() {
         this.fetchData();
-        this.getGroupsList();
     }
 
     private onChange(e: any) {

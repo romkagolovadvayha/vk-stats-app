@@ -1,11 +1,10 @@
 import React from "react";
-import {CellButton, Separator, Alert, Div, Button} from "@vkontakte/vkui";
+import {CellButton, Separator, Alert} from "@vkontakte/vkui";
 // @ts-ignore
 import Icon24Add from '@vkontakte/icons/dist/24/add';
-// @ts-ignore
-import Icon16Users from '@vkontakte/icons/dist/16/users';
 import GroupItem from "./Item";
 import AddForm from "../AddForm";
+import ProcessForm from "./ProcessForm";
 import './Styles.scss';
 
 class Presenter extends React.Component {
@@ -14,7 +13,29 @@ class Presenter extends React.Component {
     constructor(props: any) {
         super(props);
         this.state = {
-            groups: []
+            groups: [
+                {
+                    id: 45653506,
+                    name: "Афиша Грахово",
+                    screen_name: "afisha_grahovo",
+                    members_count: 4261,
+                    photo_50: "https://sun7-7.userapi.com/c633829/v633829634/340e0/YSG7c2uY8-g.jpg?ava=1"
+                },
+                {
+                    id: 87771814,
+                    name: "СЕЛЬСКАЯ НОВЬ. Информационный портал. Грахово",
+                    screen_name: "selnov_grahovo",
+                    members_count: 4223,
+                    photo_50: "https://sun7-8.userapi.com/c837623/v837623569/33af1/wzcEK04Dz18.jpg?ava=1"
+                },
+                {
+                    id: 49248213,
+                    name: "Ижевск Где Гай Стоят (ИГГС)",
+                    screen_name: "udmurtiya18rus",
+                    members_count: 239515,
+                    photo_50: "https://sun7-9.userapi.com/c846218/v846218817/110f7/5kFx49u-ApU.jpg?ava=1"
+                }
+            ]
         };
         this.closePopout = this.closePopout.bind(this);
         this.openDestructive = this.openDestructive.bind(this);
@@ -91,9 +112,7 @@ class Presenter extends React.Component {
                                        removeHandler={this.removeHandler}/>
                         ))}
                     </div>
-                    {groups.length > 1 && <Div>
-                        <Button before={<Icon16Users/>}>Начать сравнение</Button>
-                    </Div>}
+                    <ProcessForm items={this.state.groups}/>
                 </div>}
             </div>
         );

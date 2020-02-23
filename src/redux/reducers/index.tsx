@@ -9,6 +9,7 @@ import modalApp from "./modalApp";
 import friends from "./friends";
 import utils from "./utils";
 import userBy from "./userBy";
+import execute from "./execute";
 
 export default combineReducers({
     routing: routerReducer,
@@ -21,4 +22,5 @@ export default combineReducers({
     friends,
     utils,
     userBy,
+    execute,
 });
