@@ -7,6 +7,8 @@ import groups from "./groups";
 import popoutApp from "./popoutApp";
 import modalApp from "./modalApp";
 import friends from "./friends";
+import utils from "./utils";
+import userBy from "./userBy";
 
 export default combineReducers({
     routing: routerReducer,
@@ -17,4 +19,6 @@ export default combineReducers({
     popoutApp,
     modalApp,
     friends,
+    utils,
+    userBy,
 });

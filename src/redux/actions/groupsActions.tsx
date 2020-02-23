@@ -26,7 +26,6 @@ export const getGroup = (id: number, token: string) => async (dispatch: any) => 
     try {
         const req = await connect.sendPromise("VKWebAppCallAPIMethod", {
             method: "groups.getById",
-            request_id: "groupCurrent",
             params: {
                 group_id: id,
                 fields: "id,is_admin,admin_level,name,photo_50,screen_name,type,members_count",
@@ -34,9 +33,8 @@ export const getGroup = (id: number, token: string) => async (dispatch: any) => 
                 access_token: token
             }
         });
-
         dispatch({type: "GET_GROUP_RES", payload: req});
-        return req;
+        return req.response[0];
     } catch (error) {
         dispatch({type: "GET_GROUP_FAIL", payload: error.message});
     }

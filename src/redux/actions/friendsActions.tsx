@@ -7,7 +7,7 @@ export const getFriends = (token: string) => async (dispatch: any) => {
         const req = await connect.sendPromise("VKWebAppCallAPIMethod", {
             method: "friends.get",
             params: {
-                fields: "photo_50, counters",
+                fields: "photo_50, domain",
                 v: "5.102",
                 access_token: token
             }
