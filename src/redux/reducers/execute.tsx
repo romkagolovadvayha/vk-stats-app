@@ -1,6 +1,7 @@
 const initialState = {
     loadingExecuteGetMembers: false,
     loadingExecuteGetFriends: false,
+    loadingExecuteGetFriendsInfo: false,
 };
 
 const execute = (state = initialState, action: any) => {
@@ -26,6 +27,17 @@ const execute = (state = initialState, action: any) => {
                 ...state,
                 ...action.payload.response,
                 loadingExecuteGetFriends: false
+            };
+        case "GET_EXECUTE_GET_FRIENDS_INFO_REQ":
+            return {
+                ...state,
+                loadingExecuteGetFriendsInfo: true
+            };
+        case "GET_EXECUTE_GET_FRIENDS_INFO_RES":
+            return {
+                ...state,
+                ...action.payload.response,
+                loadingExecuteGetFriendsInfo: false
             };
         default:
             return state;

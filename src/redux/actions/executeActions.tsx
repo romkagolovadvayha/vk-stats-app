@@ -39,3 +39,22 @@ export const getExecuteGetFriends = (user_id: number, token: string) => async (d
         dispatch({type: "GET_EXECUTE_GET_FRIENDS_FAIL", payload: error.message});
     }
 };
+
+export const getExecuteGetFriendsInfo = (user_id: number, token: string) => async (dispatch: any) => {
+    dispatch({type: "GET_EXECUTE_GET_FRIENDS_INFO_REQ"});
+
+    try {
+        const req = await connect.sendPromise("VKWebAppCallAPIMethod", {
+            method: "execute.getFriendsInfo",
+            params: {
+                user_ids: user_id,
+                v: "5.102",
+                access_token: token
+            }
+        });
+        dispatch({type: "GET_EXECUTE_GET_FRIENDS_INFO_RES", payload: req});
+        return req.response;
+    } catch (error) {
+        dispatch({type: "GET_EXECUTE_GET_FRIENDS_INFO_FAIL", payload: error.message});
+    }
+};
